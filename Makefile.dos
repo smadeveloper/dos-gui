@@ -1,0 +1,71 @@
+# ============================================================================
+# Allegro 4 GUI - DJGPP/MS-DOS Makefile
+# ============================================================================
+# Compiler
+CC = gcc
+
+# Directories
+SRCDIR = src
+INCDIR = include
+OBJDIR = obj
+
+# Allegro 4 path
+ALLEGRO_DIR = c:/djgpp/allegro
+ALLEGRO_INC = $(ALLEGRO_DIR)/include
+ALLEGRO_LIB = $(ALLEGRO_DIR)/lib
+
+# Target
+TARGET = gui.exe
+
+# Source files
+SRCS = $(wildcard $(SRCDIR)/*.c)
+
+# Object files
+OBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
+
+# Flags
+# -DALLEGRO_NO_FIX_ALIASES   : inline alias sorununu onler
+# -DALLEGRO_NO_CLEAR_BITMAP_ALIAS : clear_bitmap inline sorununu onler
+# -fgnu89-inline              : GNU89 inline semantigi kullanir (coklu tanim onlenir)
+# -fcommon                    : ortak semboller icin eski davranis
+CFLAGS = -I$(INCDIR) -I$(ALLEGRO_INC) -Wall -O2 \
+         -DALLEGRO_NO_FIX_ALIASES \
+         -fgnu89-inline \
+         -fcommon
+
+LDFLAGS = -L$(ALLEGRO_LIB)
+
+# Allegro 4 for DJGPP
+LIBS = -lalleg -lm
+
+# ============================================================================
+# Default target
+# ============================================================================
+.PHONY: all clean
+
+all: $(TARGET)
+
+# ============================================================================
+# Link
+# ============================================================================
+$(TARGET): $(OBJS)
+	$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+
+# ============================================================================
+# Compile
+# ============================================================================
+$(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# ============================================================================
+# Create obj directory
+# ============================================================================
+$(OBJDIR):
+	mkdir $(OBJDIR)
+
+# ============================================================================
+# Clean
+# ============================================================================
+clean:
+	del $(OBJDIR)\*.o
+	del $(TARGET)
