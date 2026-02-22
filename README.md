@@ -1,6 +1,6 @@
 # dos GUI Library
 
-A lightweight, single-header-style GUI toolkit built on top of **Allegro 4** for C applications. Designed for building desktop-like interfaces with windows, menus, toolbars, and common widgets — all rendered in software with a classic Win9x-inspired theme.
+A lightweight, GUI toolkit built on top of **Allegro 4** for C applications. Designed for building desktop-like interfaces with windows, menus, toolbars, and common widgets — all rendered in software with a classic Win9x-inspired theme.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-DOS%20%7C%20Windows%20%7C%20Linux-lightgrey.svg)
@@ -8,6 +8,7 @@ A lightweight, single-header-style GUI toolkit built on top of **Allegro 4** for
 
 ---
 ## Screenshots
+![screenshot1](blob:https://github.com/c55128f3-7a51-4746-8fe7-caf29ba40a6b)
 ## Features
 
 ### Window Management
