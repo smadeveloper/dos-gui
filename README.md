@@ -8,7 +8,7 @@ A lightweight, GUI toolkit built on top of **Allegro 4** for C applications. Des
 
 ---
 ## Screenshots
-![screenshot1](blob:https://github.com/c55128f3-7a51-4746-8fe7-caf29ba40a6b)
+![screenshot1](https://raw.githubusercontent.com/smadeveloper/dos-gui/refs/heads/main/screenshots/screenshot1.png)
 ## Features
 
 ### Window Management
