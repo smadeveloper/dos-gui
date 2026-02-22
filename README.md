@@ -7,7 +7,7 @@ A lightweight, single-header-style GUI toolkit built on top of **Allegro 4** for
 ![Language](https://img.shields.io/badge/language-C99-orange.svg)
 
 ---
-
+## Screenshots
 ## Features
 
 ### Window Management
@@ -99,4 +99,4 @@ A lightweight, single-header-style GUI toolkit built on top of **Allegro 4** for
 
 ---
 
-## Project Structure
+
